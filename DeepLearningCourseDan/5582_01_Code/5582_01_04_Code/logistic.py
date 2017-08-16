@@ -1,6 +1,9 @@
-import tensorflow as tf
 import numpy as np
-%autoindent
+import tensorflow as tf
+
+#%autoindent
+from pip._vendor.distlib.compat import raw_input
+
 try:
     from tqdm import tqdm
 except ImportError:
@@ -126,4 +129,5 @@ f, plts = plt.subplots(5, sharex=True)
 for i in range(5):
     plts[i].pcolor(W.eval()[:,i].reshape([36,36]))
 
-
+s = input('--> ')
+print("end")

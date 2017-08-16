@@ -59,7 +59,7 @@ print(M2.eval())
 W = tf.Variable(0, name="weight")
 
 # But variables must be initialized by TF before use
-init_op = tf.initialize_all_variables()
+init_op = tf.global_variables_initializer()
 sess.run(init_op)
 
 print("W is:")
